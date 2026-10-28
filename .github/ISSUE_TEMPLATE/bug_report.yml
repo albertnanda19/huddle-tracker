@@ -1,0 +1,131 @@
+name: "Bug Report"
+description: "Laporkan bug pada Huddle beserta langkah reproduksinya"
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Terima kasih sudah melaporkan bug. Isi sedetail mungkin agar bisa ditelusuri.
+
+        > **Jangan menempel password, token, atau data rahasia perusahaan di issue ini.**
+
+  - type: dropdown
+    id: component
+    attributes:
+      label: "Komponen terdampak"
+      description: "Pilih bagian Huddle yang bermasalah."
+      options:
+        - "Backend API"
+        - "Frontend UI"
+        - "Media / SFU"
+        - "Signaling / WebSocket"
+        - "Deploy / Infrastruktur"
+        - "Belum tahu"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: "Tingkat keparahan"
+      description: "Pilih dampak terbesar yang dirasakan pengguna."
+      options:
+        - "Kritis (meeting tidak bisa berjalan)"
+        - "Tinggi (fitur utama rusak)"
+        - "Sedang (ada workaround)"
+        - "Rendah (kosmetik)"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: "Deskripsi bug"
+      description: "Jelaskan masalahnya dalam satu atau dua paragraf."
+      placeholder: "Contoh: video peserta lain berhenti total setelah pindah tab, audio tetap jalan."
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction_steps
+    attributes:
+      label: "Langkah reproduksi"
+      description: "Tulis langkah bernomor agar bug bisa diulang."
+      placeholder: |
+        1. Buka meeting dengan 2 peserta
+        2. Nyalakan kamera di kedua peserta
+        3. Pindahkan tab peserta pertama ke background selama 30 detik
+        4. Amati video peserta kedua
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: "Hasil yang diharapkan"
+      description: "Apa yang seharusnya terjadi?"
+      placeholder: "Contoh: video peserta kedua tetap tampil setelah tab kembali aktif."
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: "Hasil aktual"
+      description: "Apa yang benar-benar terjadi? Sertakan pesan error persis bila ada."
+      placeholder: "Contoh: video peserta kedua hitam sampai halaman di-reload."
+    validations:
+      required: true
+
+  - type: input
+    id: room_size
+    attributes:
+      label: "Ukuran room saat bug terjadi"
+      description: "Jumlah peserta dan berapa yang menyalakan kamera/mic."
+      placeholder: "Contoh: 12 peserta, 8 kamera menyala, 12 mic menyala"
+    validations:
+      required: false
+
+  - type: input
+    id: browser
+    attributes:
+      label: "Browser, versi, dan OS"
+      placeholder: "Contoh: Chrome 141 di macOS 15.2"
+    validations:
+      required: false
+
+  - type: input
+    id: occurred_at
+    attributes:
+      label: "Waktu kejadian (zona waktu dan perkiraan jam)"
+      placeholder: "Contoh: 27 Okt 2026, sekitar 14:30 WIB"
+    validations:
+      required: false
+
+  - type: input
+    id: room_id
+    attributes:
+      label: "Room ID / Meeting ID jika ada"
+      placeholder: "Contoh: ABC123 atau tautan meeting"
+    validations:
+      required: false
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: "Log, error console, atau screenshot"
+      description: "Tempel log atau error console di sini. Screenshot bisa di-drag langsung ke kolom ini."
+      render: shell
+      placeholder: |
+        Tempel log di sini, atau drag file screenshot ke kolom ini.
+    validations:
+      required: false
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: "Catatan tambahan"
+      description: "Konteks lain yang mungkin membantu, misalnya bug hanya muncul saat network lambat."
+    validations:
+      required: false
