@@ -1,0 +1,88 @@
+name: "Improvement"
+description: "Perbaiki fitur yang sudah ada, termasuk performa"
+title: "[Improvement] "
+labels: ["improvement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Terima kasih sudah mengusulkan perbaikan. Jelaskan kondisi saat ini dan hasil yang diharapkan.
+
+        > **Jangan menempel password, token, atau data rahasia perusahaan di issue ini.**
+
+  - type: dropdown
+    id: component
+    attributes:
+      label: "Komponen terdampak"
+      description: "Pilih bagian Huddle yang terkait."
+      options:
+        - "Backend API"
+        - "Frontend UI"
+        - "Media / SFU"
+        - "Signaling / WebSocket"
+        - "Deploy / Infrastruktur"
+        - "Belum tahu"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: "Prioritas"
+      options:
+        - "Tinggi"
+        - "Sedang"
+        - "Rendah"
+    validations:
+      required: true
+
+  - type: textarea
+    id: current_behavior
+    attributes:
+      label: "Perilaku saat ini"
+      description: "Jelaskan kondisi yang sekarang berjalan."
+    validations:
+      required: true
+
+  - type: textarea
+    id: desired_improvement
+    attributes:
+      label: "Perbaikan yang diinginkan"
+      description: "Jelaskan hasil yang diharapkan setelah perbaikan."
+    validations:
+      required: true
+
+  - type: textarea
+    id: benefit
+    attributes:
+      label: "Manfaat"
+      description: "Jelaskan dampak bagi pengguna atau sistem, sertakan angka jika ada."
+    validations:
+      required: true
+
+  - type: textarea
+    id: done_criteria
+    attributes:
+      label: "Kriteria selesai"
+      description: "Tulis daftar kriteria yang bisa diuji, satu per baris."
+      placeholder: |
+        - [ ] Kriteria pertama
+        - [ ] Kriteria kedua
+    validations:
+      required: true
+
+  - type: textarea
+    id: large_room_impact
+    attributes:
+      label: "Dampak ke room besar"
+      description: "Pertimbangkan room hingga 300 peserta dengan semua kamera dan mic menyala: dampak ke bandwidth, CPU, jumlah track, dan subscription."
+    validations:
+      required: true
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: "Catatan tambahan"
+      description: "Konteks lain yang mungkin membantu."
+    validations:
+      required: false

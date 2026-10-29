@@ -6,11 +6,45 @@ dan kode frontend ada di repo `huddle-fe`; keduanya tidak diubah dari repo ini.
 ## Membuat issue
 
 1. Buka tab **Issues** lalu klik **New issue**.
-2. Pilih form **Bug Report** (issue kosong sengaja dimatikan).
-3. Isi komponen, tingkat keparahan, langkah reproduksi, dan hasil yang diharapkan/aktual.
+2. Pilih form yang paling sesuai dengan jenis issue (issue kosong sengaja dimatikan).
+3. Isi komponen, prioritas atau tingkat keparahan, dan bagian lain yang diminta form.
 4. Kirim issue, lalu catat nomornya.
 
 Jangan menempel password, token, atau data rahasia perusahaan di issue.
+
+## Jenis issue
+
+| Form | Kegunaan | Label jenis |
+|------|----------|-------------|
+| Bug Report | Melaporkan bug beserta langkah reproduksinya | `bug` |
+| Feature Request | Mengusulkan kemampuan baru | `feature` |
+| Improvement | Memperbaiki fitur yang sudah ada, termasuk performa | `improvement` |
+| Refactor / Chore | Tech debt, refactor, CI, deploy, atau dokumentasi | `refactor` |
+
+## Label
+
+**Jenis**
+
+- `bug` — bug yang dilaporkan lewat Bug Report.
+- `feature` — fitur baru.
+- `improvement` — perbaikan fitur yang sudah ada.
+- `refactor` — refactor, tech debt, dan chore.
+
+**Komponen**
+
+- `backend` — Backend API.
+- `frontend` — Frontend UI.
+- `media-sfu` — Media plane dan SFU.
+- `signaling` — Signaling dan WebSocket.
+- `deploy` — Deploy dan infrastruktur.
+
+**Tambahan**
+
+- `performance` — performa dan skalabilitas.
+- Label lain hanya dibuat atas permintaan pemilik repo.
+
+Severity dan prioritas ditulis di body issue, bukan sebagai label. Form web hanya memasang
+label jenis, jadi label komponen dan label tambahan ditambahkan manual atau oleh agent.
 
 ## Menutup issue otomatis dari PR
 
