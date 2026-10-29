@@ -1,7 +1,8 @@
 # huddle-tracker
 
-Repo ini hanya untuk mencatat issue bug Huddle. Kode backend ada di repo `huddle-be`
-dan kode frontend ada di repo `huddle-fe`; keduanya tidak diubah dari repo ini.
+Repo ini hanya untuk mencatat issue Huddle (bug, fitur, improvement, dan refactor/chore).
+Kode backend ada di repo `huddle-be` dan kode frontend ada di repo `huddle-fe`; keduanya
+tidak diubah dari repo ini.
 
 ## Membuat issue
 
